@@ -1,15 +1,9 @@
-import { useFeedback } from '../feedbackContext/feedbackContext';
+import { useFeedback } from '../FeedbackContext/FeedbackContext';
 import css from '../Statistics/Statistics.module.css';
 import { Notification } from '../Notification/Notification';
 
 export const Statistics = () => {
-  const {
-    good,
-    neutral,
-    bad,
-    countTotalFeedback,
-    countPositiveFeedbackPercentage,
-  } = useFeedback();
+  const { good, neutral, bad, countTotalFeedback, countPositiveFeedbackPercentage } = useFeedback();
 
   return (
     <>
@@ -44,9 +38,7 @@ export const Statistics = () => {
           <li className={css.listItem}>
             <p className={css.listItemParagraph}>
               Positive feedback:
-              <span className={css.listItemSpan}>
-                {countPositiveFeedbackPercentage()}
-              </span>
+              <span className={css.listItemSpan}>{countPositiveFeedbackPercentage()}</span>
             </p>
           </li>
         </ul>

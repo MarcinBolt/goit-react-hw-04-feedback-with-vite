@@ -1,4 +1,4 @@
-import { useFeedback } from '../feedbackContext/feedbackContext';
+import { useFeedback } from '../FeedbackContext/FeedbackContext';
 import css from './FeedbackOptions.module.css';
 import { nanoid } from 'nanoid';
 
