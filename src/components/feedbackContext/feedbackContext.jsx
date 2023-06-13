@@ -1,7 +1,9 @@
 import { createContext, useContext, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const FeedbackContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useFeedback = () => useContext(FeedbackContext);
 
 export const FeedbackProvider = ({ children }) => {
@@ -46,4 +48,8 @@ export const FeedbackProvider = ({ children }) => {
       {children}
     </FeedbackContext.Provider>
   );
+};
+
+FeedbackProvider.propTypes = {
+  children: PropTypes.element.isRequired,
 };
